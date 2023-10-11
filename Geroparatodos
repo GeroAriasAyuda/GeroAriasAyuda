@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contador de Clics</title>
+</head>
+<body>
+    <button id="clicButton">Haz clic aquí</button>
+    <p>Clics: <span id="contador">0</span></p>
+    <script src="contador.js"></script>
+</body>
+</html>
+
+
+// Contador de clics
+var contador = 0;
+
+// Obtener el botón y el contador
+var boton = document.getElementById("clicButton");
+var contadorElemento = document.getElementById("contador");
+
+// Agregar un evento clic al botón
+boton.addEventListener("click", function() {
+    contador++;
+    contadorElemento.textContent = contador;
+});
+
+
+/* Estilos para el botón */
+#clicButton {
+  background-color: yellow; /* Fondo amarillo */
+  color: white; /* Texto en color blanco */
+  padding: 15px 30px; /* Padding para hacer el botón más grande */
+  font-size: 18px; /* Tamaño de fuente */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+}
+
+/* Estilo para cuando el mouse está sobre el botón */
+#clicButton:hover {
+  background-color: #ffcc00; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Otros estilos (opcionales) */
+body {
+  text-align: center; /* Centra el contenido en el medio de la página */
+}
+
+#contador {
+  font-size: 24px; /* Tamaño de fuente para el contador */
+}
